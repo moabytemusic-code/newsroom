@@ -20,7 +20,7 @@
     </header>
 
     <article class="container">
-        <h1 class="report-headline">AI Bot Delivering 178.4% Yields While Banks Pay 0.01% — Here’s How Everyday People Are Cashing In</h1>
+        <h1 class="report-headline" id="ab-headline">AI Bot Delivering 178.4% Yields While Banks Pay 0.01% — Here’s How Everyday People Are Cashing In</h1>
 
         <div class="byline">
             <span>By <strong>Sarah Jenkins</strong>, Senior Financial Correspondent</span>
@@ -68,13 +68,6 @@
         </section>
 
         <section class="content-section">
-            <img src="assets/yield-chart-real.png" alt="Aurum AI Performance Chart" class="main-image" style="margin-top: 20px;">
-            <p style="font-size: 0.9rem; color: #666; text-align: center; font-style: italic; margin-top: -10px;">
-                Fig A: AURUM AI vs. S&P 500 vs. Traditional Savings – 2025 YTD
-            </p>
-        </section>
-
-        <section class="content-section">
             <h3>The "Savings Trap" vs. The AI Advantage</h3>
             <p>
                 For decades, the path to wealth was simple: work hard, save money, and let the bank give you a "safe" 2% or 3%. But in today's economy, those days are over. When you deposit money in a legacy bank, they don't leave it in a vault. They use high-frequency trading algorithms, institutional-grade bots, and complex market leverage to generate massive returns.
@@ -105,8 +98,12 @@
             <div class="chart-container">
                 <canvas id="yieldChart"></canvas>
             </div>
+            <img src="assets/yield-chart-real.png" alt="Aurum AI Performance Chart" class="main-image" style="margin-top: 20px;">
+            <p style="font-size: 0.9rem; color: #666; text-align: center; font-style: italic; margin-top: -10px;">
+                Fig A: AURUM AI vs. S&P 500 vs. Traditional Savings – 2025 YTD
+            </p>
             <p style="font-size: 0.9rem; color: #666; text-align: center; font-style: italic;">
-                Fig A: Performance comparison between AURUM AI, the S&P 500, and traditional savings Year-To-Date (2025).
+                Top Detail: Comparison between AURUM AI, the S&P 500, and traditional savings Year-To-Date (2025).
             </p>
         </section>
 
@@ -193,6 +190,9 @@
         <div class="container">
             <p><strong>Risk Disclaimer:</strong> Trading involves risk. While the Zeus AI Bot and EX-AI Delta Bot use advanced algorithmic strategies, past performance (including the 178.4% 2025 yield) is not a guarantee of future results. Algorithmic trading can result in losses as well as gains. Participants should never trade with capital they cannot afford to lose. AURUM AI is an asset orchestration platform and does not provide financial advice. </p>
             <p style="margin-top: 20px;">&copy; 2026 Global Finance Journal. All rights reserved. Distributed by Aurum AI.</p>
+            <p class="disclaimer-small" style="margin-top: 30px; font-style: italic;">
+                *Past performance does not guarantee future results. Investment involves risk of loss. Full details and terms at welcometoaurum.com. This is not financial advice.*
+            </p>
         </div>
     </footer>
 
@@ -215,10 +215,25 @@
             }, 1000);
         }
 
+        // Headline A/B Test Rotator
+        const headlines = [
+            "AI Bot Delivering 178.4% Yields While Banks Pay 0.01% — Here’s How Everyday People Are Cashing In",
+            "Why 118,000+ Regular People Just Quit Banks for This AI Money Machine",
+            "Breaking: The AI System That Made Traditional Savings Look Like a Joke"
+        ];
+        
+        function rotateHeadline() {
+            const headlineEl = document.getElementById('ab-headline');
+            const randomIndex = Math.floor(Math.random() * headlines.length);
+            headlineEl.textContent = headlines[randomIndex];
+            console.log('Running A/B Test Variant:', randomIndex + 1);
+        }
+
         window.onload = function () {
             var fifteenMinutes = 60 * 15,
                 display = document.querySelector('#timer');
             startTimer(fifteenMinutes, display);
+            rotateHeadline(); // Run headline A/B test
         };
 
         const ctx = document.getElementById('yieldChart').getContext('2d');
