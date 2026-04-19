@@ -29,14 +29,31 @@ h1, h2, h3 {
 }
 
 .breaking-banner {
-    background: var(--primary);
+    background: #000;
     color: white;
     text-transform: uppercase;
     font-weight: 800;
-    font-size: 0.8rem;
-    padding: 8px 0;
+    font-size: 0.75rem;
+    padding: 6px 0;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 2.5px;
+    border-bottom: 2px solid var(--primary);
+}
+
+.breaking-banner .live-dot {
+    height: 10px;
+    width: 10px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
 }
 
 header.masthead {
@@ -171,48 +188,77 @@ header.masthead {
 }
 
 .cta-box {
-    background: linear-gradient(135deg, #004d40 0%, #00251a 100%);
+    background: linear-gradient(135deg, #0d1b2a 0%, #1b263b 100%);
     color: white;
-    padding: 40px;
+    padding: 50px 40px;
     text-align: center;
     border-radius: 12px;
     margin: 60px 0;
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
 .cta-box h2 {
     color: white;
-    font-family: 'Inter', sans-serif;
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.4rem;
+    margin-bottom: 10px;
 }
 
 .btn-primary {
-    background: var(--gold);
-    color: var(--dark);
-    padding: 18px 40px;
+    background: #ff4500; /* Deep Orange/Red */
+    color: white;
+    padding: 22px 50px;
     text-decoration: none;
     font-weight: 800;
     text-transform: uppercase;
-    border-radius: 50px;
+    border-radius: 8px;
     display: inline-block;
-    font-size: 1.2rem;
-    transition: transform 0.2s;
+    font-size: 1.4rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.3);
 }
 
 .btn-primary:hover {
-    transform: scale(1.05);
-    background: #e5c150;
+    transform: translateY(-5px);
+    background: #ff571a;
+    box-shadow: 0 15px 30px rgba(255, 69, 0, 0.4);
+}
+
+.countdown-wrapper {
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.countdown-timer {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--primary);
+    background: white;
+    padding: 5px 15px;
+    border-radius: 4px;
+    margin-left: 10px;
 }
 
 .urgency-badge {
-    background: #ffecb3;
-    color: #f57c00;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-weight: 700;
-    font-size: 0.8rem;
+    background: #ffebee;
+    color: var(--primary);
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 0.9rem;
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--primary);
+    text-transform: uppercase;
+}
+
+.disclaimer-small {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+    max-width: 600px;
+    margin: 20px auto 0;
+    line-height: 1.4;
 }
 
 footer {

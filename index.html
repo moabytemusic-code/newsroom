@@ -10,7 +10,7 @@
 <body>
 
     <div class="breaking-banner">
-        🚨 Special Financial Report: Global Wealth Migration 🚨
+        <span class="live-dot"></span> GLOBAL FINANCE JOURNAL • BREAKING • LIVE
     </div>
 
     <header class="masthead">
@@ -20,7 +20,7 @@
     </header>
 
     <article class="container">
-        <h1 class="report-headline">Stop Donating Your Wealth to Legacy Banks. Let AURUM’s AI Make You Money While You Sleep.</h1>
+        <h1 class="report-headline">AI Bot Delivering 178.4% Yields While Banks Pay 0.01% — Here’s How Everyday People Are Cashing In</h1>
 
         <div class="byline">
             <span>By <strong>Sarah Jenkins</strong>, Senior Financial Correspondent</span>
@@ -65,6 +65,13 @@
                     <span class="stat-label">Assets Orchestrated</span>
                 </div>
             </div>
+        </section>
+
+        <section class="content-section">
+            <img src="assets/yield-chart-real.png" alt="Aurum AI Performance Chart" class="main-image" style="margin-top: 20px;">
+            <p style="font-size: 0.9rem; color: #666; text-align: center; font-style: italic; margin-top: -10px;">
+                Fig A: AURUM AI vs. S&P 500 vs. Traditional Savings – 2025 YTD
+            </p>
         </section>
 
         <section class="content-section">
@@ -160,15 +167,24 @@
         </section>
 
         <section class="cta-box">
-            <span class="urgency-badge">Urgent: Only 15 Slots Left in April Cohort</span>
+            <span class="urgency-badge">Urgent: April Cohort Almost Full — Only 15 Partner Slots Remain This Month</span>
+            
+            <div class="countdown-wrapper">
+                Registration ends in: <span class="countdown-timer" id="timer">14:59</span>
+            </div>
+
             <h2>Democratize Your Future Today</h2>
-            <p style="margin-bottom: 30px; font-size: 1.1rem;">
-                AURUM AI is not a "magic button," but a sophisticated piece of financial infrastructure. Join 118,000+ global partners in the Great Yield Migration.
+            <p style="margin-bottom: 25px; font-size: 1.15rem; font-weight: 500;">
+                Join 118,000+ partners in the Great Yield Migration — Free to Start
             </p>
-            <a href="https://welcometoaurum.com" class="btn-primary">Claim Your Invite - Free to Start</a>
+            <a href="https://welcometoaurum.com" class="btn-primary">Claim Your Invite Now</a>
             <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">
                 ✓ 100% Liquid Profits | ✓ No KYC Required | ✓ 24/7 Global Payouts
             </p>
+
+            <div class="disclaimer-small">
+                Past performance does not guarantee future results. Yields involve risk of loss. Full details and terms at welcometoaurum.com. Not financial advice.
+            </div>
         </section>
 
     </article>
@@ -181,6 +197,30 @@
     </footer>
 
     <script>
+        // Countdown Timer Logic
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            var fifteenMinutes = 60 * 15,
+                display = document.querySelector('#timer');
+            startTimer(fifteenMinutes, display);
+        };
+
         const ctx = document.getElementById('yieldChart').getContext('2d');
         const yieldChart = new Chart(ctx, {
             type: 'line',
