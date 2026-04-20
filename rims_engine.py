@@ -94,12 +94,12 @@ class RIMSEngine:
         html_list = ""
         for s in stories:
             html_list += f"""
-            <div class="story-card">
-                <img src="news/{s['slug']}/assets/hero.png" class="story-img" alt="{s['headline']}">
-                <div class="story-content">
-                    <div class="story-meta">{s['category']}</div>
-                    <a href="news/{s['slug']}/index.html" class="story-title">{s['headline']}</a>
-                    <p class="story-excerpt">{s['dek']}</p>
+            <div class="news-card">
+                <img src="news/{s['slug']}/assets/hero.png" class="card-img" alt="{s['headline']}">
+                <div class="card-content">
+                    <div class="card-kicker">{s['category']}</div>
+                    <a href="news/{s['slug']}/index.html" class="card-title">{s['headline']}</a>
+                    <p class="card-excerpt">{s['dek']}</p>
                 </div>
             </div>
             """
@@ -144,18 +144,18 @@ class RIMSEngine:
         with open(self.template_path, 'r') as f:
             template = f.read()
             
-        # Unified Placeholder Mapping
         mapping = {
-            # ... (mapping values same as before)
             "TITLE": f"{content['headline']} | Crescent Ledger",
             "SITE_NAME": "Crescent Ledger",
-            "LOGO_TEXT": "CL",
+            "LOGO_TEXT": "Crescent",
+            "SITE_NAME_SUFFIX": "Ledger",
             "CATEGORY": content.get("category", niche),
             "HEADLINE": content["headline"],
             "DEK": content["dek"],
             "AUTHOR": content.get("author", "Staff Reporter"),
             "HERO_CAPTION": content.get("hero_caption", "Breaking news footage from the scene."),
             "ARTICLE_CONTENT": content["body_html"],
+            "POST_CONTEXT_CONTENT": content.get("post_context", "Further updates are expected as local authorities continue their investigation."),
             "TIMELINE_HTML": content.get("timeline_html", ""),
             "RISK_DISCLAIMER": "Past performance does not guarantee future results. Investment involves risk.",
             "POPUP_TITLE": "Wait — Before You Go",
