@@ -1,0 +1,83 @@
+{
+  "categories": {
+    "Wealth": {
+      "featured": {
+        "name": "Credit Score",
+        "link": "https://offers.com/credit/?aff=GLOBAL",
+        "cta": "Check Your Free Credit Score Instantly",
+        "network": "MaxBounty"
+      },
+      "secondary": [
+        {
+          "name": "AURUM AI",
+          "link": "https://welcometoaurum.com/?aff=GLOBAL",
+          "ticker_text": "Claim Your AURUM AI Invite — Free to Start",
+          "sidebar_text": "Join 118,000+ Partners letting AI orchestrate yields",
+          "network": "Direct"
+        },
+        {
+          "name": "Personal Loan",
+          "link": "https://offers.com/loan/?aff=GLOBAL",
+          "ticker_text": "Personal Loans Up to $15,000 — Fast Approval",
+          "sidebar_text": "Get a Personal Loan Up to $15,000 Instantly",
+          "network": "MaxBounty"
+        }
+      ]
+    },
+    "Health": {
+      "featured": {
+        "name": "Keto Super-Burn",
+        "link": "https://hop.clickbank.net/?affiliate=YOUR_HB&vendor=KETO",
+        "cta": "Shocking 'Keto Dissolve' Method Hits National News",
+        "network": "ClickBank"
+      },
+      "secondary": [
+        {
+          "name": "Aging Brain Fix",
+          "link": "https://hop.clickbank.net/?affiliate=YOUR_HB&vendor=BRAIN",
+          "ticker_text": "Special Report: The 'Aging Brain' Study New Yorkers Are Reading",
+          "sidebar_text": "Try the 30-Second Morning Protocol for Mental Clarity",
+          "network": "ClickBank"
+        }
+      ]
+    },
+    "Survival": {
+      "featured": {
+        "name": "Blackout Protection",
+        "link": "https://hop.clickbank.net/?affiliate=YOUR_HB&vendor=SURVIVE",
+        "cta": "How to Power Your Home for 72 Hours Without a Generator",
+        "network": "ClickBank"
+      },
+      "secondary": [
+        {
+          "name": "72-Hour Food Kit",
+          "link": "https://offers.com/food/?aff=GLOBAL",
+          "ticker_text": "Stock Up Now: The 72-Hour Survival Food Kit",
+          "sidebar_text": "Why Thousands of Families Are Reviewing Emergency Food Plans",
+          "network": "Direct"
+        }
+      ]
+    },
+    "Tech": {
+      "featured": {
+        "name": "Identity Shield",
+        "link": "https://offers.com/id/?aff=GLOBAL",
+        "cta": "Identity Monitoring Tools Families Review After Emergencies",
+        "network": "MaxBounty"
+      },
+      "secondary": [
+        {
+          "name": "Security Cameras",
+          "link": "https://offers.com/cam/?aff=GLOBAL",
+          "ticker_text": "Compare Smart Cameras That Send Alerts in Seconds",
+          "sidebar_text": "Why Smart Cameras are Trending in Suburbs Across the USA",
+          "network": "Direct"
+        }
+      ]
+    }
+  },
+  "fallbacks": {
+    "default_niche": "Wealth",
+    "global_footer_link": "https://welcometoaurum.com"
+  }
+}
